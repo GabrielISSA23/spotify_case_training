@@ -55,18 +55,18 @@ jobs:
     # This step runs the linter against the codebase
     - name: Lint with ruff
       run: |
-        uv run ruff check
+        uvx ruff check
 
     - name: Format with ruff
       run: |
-        uv run ruff format --check
+        uvx ruff format --check
 
     - name: Check libs sorting 
       run: |
-        uv run isort .  
+        uvx isort .  
 
     - name: check for consistency errors 
       run: |
-        uv run ty check 
+        uvx ty check 
     
 
